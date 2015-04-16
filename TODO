@@ -1,0 +1,34 @@
+- Probably move mode implementations to the objects themselves -- makes more
+sense to do it this way as data objects should know how to permute themselves
+and modes are specific to different types of objects.
+
+- Implement "incremental" mode for C numeric data types.  This hasn't been 
+implemented because I have not determined what strategy to take with it, ie:
+which magic numbers to fuzz.  A bit flipping approach may work but that
+is not really "incrementing" per se, and bit flipping may be implemented as
+its own mode.  Random mode works well enough for these types, and numbers can
+be generated within a range or static numbers can be used.
+
+- Add more modes, data types, and some encodings.  Encodings will likely be
+implemented as static methods that each data object can call, and will change
+the content to whatever encoding.  Possibilities include base64, xdr.  Also
+plan to implement crc32 checksums, either as a separate data type or a static
+method that all data objects can call.
+
+- apKeywords will probably get subclassed to apString.  It shares so many
+fields and methods that this approach makes sense.
+
+- The C numeric data types may share a common parent in the future since the
+only real variations are the minsize/maxsizes for each type.  Sepearate 
+classes may also be created for unsigned and signed data types, I am not happy
+with the side effects in the current implementation, ie: setting minsize and 
+maxsize to legal ranges of the data type.
+
+- Create more example scripts for various protocols and file formats.  The 
+goal is to ship antiparser will as many functional fuzzer scripts as possible.
+
+- Optimize, optimize, optimizize!
+
+- Add more exception handling.
+
+- Implement server functionality for apSocket -- bind, listen, accept, etc.  

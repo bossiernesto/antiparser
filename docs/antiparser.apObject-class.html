@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>antiparser.apObject</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="antiparser-module.html">Module&nbsp;antiparser</a> ::
+        Class&nbsp;apObject
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="antiparser.apObject-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class apObject</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="antiparser.apChar-class.html"><code>apChar</code></a>,
+    <a href="antiparser.apKeywords-class.html"><code>apKeywords</code></a>,
+    <a href="antiparser.apLong-class.html"><code>apLong</code></a>,
+    <a href="antiparser.apShort-class.html"><code>apShort</code></a>,
+    <a href="antiparser.apString-class.html"><code>apString</code></a></dd></dl>
+
+<hr/>
+
+Parent antiparser data object class -- not be invoked directly.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructor that is called when the class is instantiated.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#display" class="summary-sig-name"><code>display</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Print the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getByteOrder" class="summary-sig-name"><code>getByteOrder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the byteorder property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getContent" class="summary-sig-name"><code>getContent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the content of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getDebug" class="summary-sig-name"><code>getDebug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the debugging status of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMaxSize" class="summary-sig-name"><code>getMaxSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the maxsize property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMinSize" class="summary-sig-name"><code>getMinSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the minsize property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMode" class="summary-sig-name"><code>getMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the mode that is currently enabled for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getOptional" class="summary-sig-name"><code>getOptional</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the optional property value of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getStatic" class="summary-sig-name"><code>getStatic</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the static property value of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setByteOrder" class="summary-sig-name"><code>setByteOrder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>byteorder</span>)</span></code>
+<br />
+Sets the byteorder property of the data object to &quot;big&quot; or 
+&quot;little&quot; endian.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setContent" class="summary-sig-name"><code>setContent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>content</span>)</span></code>
+<br />
+Sets the content of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setDebug" class="summary-sig-name"><code>setDebug</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Sets the debugging status to True or False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMaxSize" class="summary-sig-name"><code>setMaxSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>maxsize</span>)</span></code>
+<br />
+Sets the maxsize property of the data object to an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMinSize" class="summary-sig-name"><code>setMinSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>minsize</span>)</span></code>
+<br />
+Sets the minsize property of the data object to an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMode" class="summary-sig-name"><code>setMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Sets the mode for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setOptional" class="summary-sig-name"><code>setOptional</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>optional</span>)</span></code>
+<br />
+Sets the optional property of the data object to True or False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setStatic" class="summary-sig-name"><code>setStatic</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>static</span>)</span></code>
+<br />
+Sets the static property of the data object to True or False.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Constructor that is called when the class is instantiated.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="display"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">display</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Print the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getByteOrder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getByteOrder</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the byteorder property of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getContent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getContent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the content of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getDebug</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the debugging status of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getMaxSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getMaxSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Gets the maxsize property of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getMinSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the minsize property of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the mode that is currently enabled for the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getOptional"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getOptional</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Return the optional property value of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getStatic"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getStatic</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the static property value of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setByteOrder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setByteOrder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>byteorder</span>)</span>
+  </h3>
+  <p>Sets the byteorder property of the data object to &quot;big&quot; or 
+  &quot;little&quot; endian.</p>
+  byteorder determines the endianness of the data object. Valid values 
+  for byteorder are &quot;big&quot;, &quot;little&quot;, and None. 
+  byteorder defaults to None, which generally means that the native 
+  byteorder is used.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setContent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setContent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>content</span>)</span>
+  </h3>
+  Sets the content of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setDebug</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>debug</span>)</span>
+  </h3>
+  Sets the debugging status to True or False. Defaults to False.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setMaxSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setMaxSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>maxsize</span>)</span>
+  </h3>
+  Sets the maxsize property of the data object to an integer.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setMinSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>minsize</span>)</span>
+  </h3>
+  Sets the minsize property of the data object to an integer.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+  <p>Sets the mode for the data object.</p>
+  mode represents various methods of permuting the data object. The 
+  user may wish to generate random objects of random size, within the 
+  bounds of the minsize and maxsize attributes. This is the default mode. 
+  Other modes may allow the user to generate data of incrementally larger 
+  sizes.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setOptional"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setOptional</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>optional</span>)</span>
+  </h3>
+  <p>Sets the optional property of the data object to True or False.</p>
+  optional is a property that determines whether or not the content 
+  should be included in the antiparser in any given permutation. If 
+  optional is set to True, then there is a 50% chance in any given 
+  permutation that the content of the data object will be included in the 
+  antiparser payload. optional defaults to False, which means always 
+  include the content of the data object in the antiparser payload.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setStatic"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setStatic</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>static</span>)</span>
+  </h3>
+  <p>Sets the static property of the data object to True or False.</p>
+  static is a property that determines whether or not the content 
+  should be randomly permuted by the antiparser. This allows for 
+  inclusion of static data in the antiparser. If this value is set to 
+  True, then the content will not be randomly permuted. static defaults 
+  to False, as the desired default behavior is to randomly permute the 
+  content of the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1 on Wed Aug 17 09:02:50 2005</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

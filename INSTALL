@@ -1,0 +1,8 @@
+No real installation necessary, just unpack the archive in the directory of
+your choice.  If you plan of using the fuzzer/example scripts or running an
+antiparser script from a directory other than the install directory, add the 
+installation directory to the PYTHONPATH environment variable.
+
+Unix/bash example:
+export PYTHONPATH=installdirectory
+

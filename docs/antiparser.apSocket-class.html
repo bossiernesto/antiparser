@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>antiparser.apSocket</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="antiparser-module.html">Module&nbsp;antiparser</a> ::
+        Class&nbsp;apSocket
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="antiparser.apSocket-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class apSocket</h2>
+
+<hr/>
+
+<p>apSocket is a wrapper class for the Python socket API, for specialized 
+use with the antiparser.</p>
+apSocket provides much of the same functionality of the Python socket 
+API, but is implemented as a series of shortcuts for using the sockets 
+interface. When apSocket is instantiated, it implicitly creates a socket 
+of the specified type.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+Initializes a socket of the specified type, either 'udp' or 'tcp'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#close" class="summary-sig-name"><code>close</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Alias for socket.close method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#connect" class="summary-sig-name"><code>connect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>host</span>,
+          <span class=summary-sig-arg>port</span>)</span></code>
+<br />
+Alias for the socket.connect method, forming a TCP connection to 
+host/port.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#recv" class="summary-sig-name"><code>recv</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Alias for the socket.recv method, blocks until the number of bytes 
+specified by size is read from the socket.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#replayTCP" class="summary-sig-name"><code>replayTCP</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Sends a permutation of the antiparser that was previously saved over 
+TCP, as specified by fileName.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#replayUDP" class="summary-sig-name"><code>replayUDP</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>,
+          <span class=summary-sig-arg>host</span>,
+          <span class=summary-sig-arg>port</span>)</span></code>
+<br />
+Sends a permutation of the antiparser that was previously saved over 
+UDP, as specified by fileName.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#sendTCP" class="summary-sig-name"><code>sendTCP</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>payload</span>)</span></code>
+<br />
+Alias for the socket.sendall method, will send the entire payload over 
+the socket.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#sendUDP" class="summary-sig-name"><code>sendUDP</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>payload</span>,
+          <span class=summary-sig-arg>host</span>,
+          <span class=summary-sig-arg>port</span>)</span></code>
+<br />
+Alias for the socket.sendto method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apSocket-class.html#sleep" class="summary-sig-name"><code>sleep</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>secs</span>)</span></code>
+<br />
+Alias for time.sleep, sleeps for the number of seconds specified by 
+the secs argument.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>'tcp'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  <p>Initializes a socket of the specified type, either 'udp' or 
+  'tcp'.</p>
+  __init__ will create a socket which persists until closed using the 
+  close(). If no type argument is specified, than the default type is 
+  'tcp'.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="close"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">close</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Alias for socket.close method. This closes the existing socket.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="connect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">connect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>host</span>,
+          <span class=sig-arg>port</span>)</span>
+  </h3>
+  <p>Alias for the socket.connect method, forming a TCP connection to 
+  host/port.</p>
+  This method is called prior to sendTCP, but not sendUDP, since UDP 
+  is a connectionless protocol.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="recv"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">recv</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>size</span>)</span>
+  </h3>
+  Alias for the socket.recv method, blocks until the number of bytes 
+  specified by size is read from the socket.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="replayTCP"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">replayTCP</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>)</span>
+  </h3>
+  <p>Sends a permutation of the antiparser that was previously saved over 
+  TCP, as specified by fileName.</p>
+  replayTCP calls antiparser.load(fileName) internally. replay also 
+  assumes an existing apSocket instance. The method will then send the 
+  antiparser permutation to the existing TCP socket.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="replayUDP"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">replayUDP</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>,
+          <span class=sig-arg>host</span>,
+          <span class=sig-arg>port</span>)</span>
+  </h3>
+  <p>Sends a permutation of the antiparser that was previously saved over 
+  UDP, as specified by fileName.</p>
+  replayUDP calls antiparser.load(fileName) internally. replay also 
+  assumes an existing apSocket instance. The method will then send the 
+  antiparser permutation to the existing UDP socket.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sendTCP"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sendTCP</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>payload</span>)</span>
+  </h3>
+  Alias for the socket.sendall method, will send the entire payload 
+  over the socket.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sendUDP"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sendUDP</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>payload</span>,
+          <span class=sig-arg>host</span>,
+          <span class=sig-arg>port</span>)</span>
+  </h3>
+  <p>Alias for the socket.sendto method.</p>
+  sendUDP will send packets to host, port until all bytes in payload 
+  are sent.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sleep"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sleep</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>secs</span>)</span>
+  </h3>
+  Alias for time.sleep, sleeps for the number of seconds specified by 
+  the secs argument.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1 on Wed Aug 17 09:02:50 2005</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

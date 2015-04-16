@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>antiparser.apKeywords</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="antiparser-module.html">Module&nbsp;antiparser</a> ::
+        Class&nbsp;apKeywords
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="antiparser.apKeywords-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class apKeywords</h2>
+
+<pre class="base-tree">
+<a href="antiparser.apObject-class.html"><code>apObject</code></a> --+
+           |
+          <b>apKeywords</b>
+</pre><br />
+
+<hr/>
+
+<p>apKeywords represents a list of random values to prepend to the 
+content of the data object.</p>
+The main application of apKeywords is to provide a list of commands or 
+strings to randomly cycle through when fuzzing. apKeywords can be adapted 
+to represent semi-static data where the initial part of the data has a 
+limited set of values but the rest of the data is random.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructor that is called when the class is instantiated.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getContentSize" class="summary-sig-name"><code>getContentSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the length of the current content.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getCurrentKeyword" class="summary-sig-name"><code>getCurrentKeyword</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current keyword associated with the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getIllegalChars" class="summary-sig-name"><code>getIllegalChars</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of illegal characters.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getKeywords" class="summary-sig-name"><code>getKeywords</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the list of keywords associated with the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getSeparator" class="summary-sig-name"><code>getSeparator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the separator string for the keywords.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#getTerminator" class="summary-sig-name"><code>getTerminator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a terminator string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#setCurrentKeyword" class="summary-sig-name"><code>setCurrentKeyword</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>keyword</span>)</span></code>
+<br />
+Sets the current keyword associated with the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#setIllegalChars" class="summary-sig-name"><code>setIllegalChars</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>chars</span>)</span></code>
+<br />
+Sets a string of illegal characters.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#setKeywords" class="summary-sig-name"><code>setKeywords</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>keywords</span>)</span></code>
+<br />
+Sets the list of keywords for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#setSeparator" class="summary-sig-name"><code>setSeparator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>separator</span>)</span></code>
+<br />
+Sets a separator string for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apKeywords-class.html#setTerminator" class="summary-sig-name"><code>setTerminator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>terminator</span>)</span></code>
+<br />
+Sets a terminator string for the data object.</td></tr>
+<tr bgcolor="#e8f0f8" class="group">
+  <th colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;Inherited from apObject</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#display" class="summary-sig-name"><code>display</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Print the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getByteOrder" class="summary-sig-name"><code>getByteOrder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the byteorder property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getContent" class="summary-sig-name"><code>getContent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the content of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getDebug" class="summary-sig-name"><code>getDebug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the debugging status of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMaxSize" class="summary-sig-name"><code>getMaxSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the maxsize property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMinSize" class="summary-sig-name"><code>getMinSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the minsize property of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getMode" class="summary-sig-name"><code>getMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the mode that is currently enabled for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getOptional" class="summary-sig-name"><code>getOptional</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the optional property value of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#getStatic" class="summary-sig-name"><code>getStatic</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the static property value of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setByteOrder" class="summary-sig-name"><code>setByteOrder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>byteorder</span>)</span></code>
+<br />
+Sets the byteorder property of the data object to &quot;big&quot; or 
+&quot;little&quot; endian.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setContent" class="summary-sig-name"><code>setContent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>content</span>)</span></code>
+<br />
+Sets the content of the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setDebug" class="summary-sig-name"><code>setDebug</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Sets the debugging status to True or False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMaxSize" class="summary-sig-name"><code>setMaxSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>maxsize</span>)</span></code>
+<br />
+Sets the maxsize property of the data object to an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMinSize" class="summary-sig-name"><code>setMinSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>minsize</span>)</span></code>
+<br />
+Sets the minsize property of the data object to an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setMode" class="summary-sig-name"><code>setMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Sets the mode for the data object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setOptional" class="summary-sig-name"><code>setOptional</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>optional</span>)</span></code>
+<br />
+Sets the optional property of the data object to True or False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.apObject-class.html#setStatic" class="summary-sig-name"><code>setStatic</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>static</span>)</span></code>
+<br />
+Sets the static property of the data object to True or False.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Constructor that is called when the class is instantiated.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="antiparser.apObject-class.html#__init__"><code>antiparser.apObject.__init__</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getContentSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getContentSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the length of the current content.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getCurrentKeyword"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getCurrentKeyword</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the current keyword associated with the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getIllegalChars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getIllegalChars</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a list of illegal characters.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getKeywords"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getKeywords</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the list of keywords associated with the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getSeparator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the separator string for the keywords.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getTerminator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getTerminator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a terminator string.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setCurrentKeyword"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setCurrentKeyword</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>keyword</span>)</span>
+  </h3>
+  Sets the current keyword associated with the data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setIllegalChars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setIllegalChars</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>chars</span>)</span>
+  </h3>
+  <p>Sets a string of illegal characters.</p>
+  illegalchars alsos the user to specify characters that will not be 
+  included in the antiparser payload for the data object. illegalchars is 
+  a string value, and defaults to an empty string. Calling this method 
+  changes the range of legal characters, ie: the charRange field.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setKeywords"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setKeywords</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>keywords</span>)</span>
+  </h3>
+  <p>Sets the list of keywords for the data object.</p>
+  keywords represents a list of values. The antiparser will choose a 
+  random value from this list for every permutation. The antiparser will 
+  then append the random content to the keyword. The default value is an 
+  empty list. This will also set the current keyword associated with the 
+  data object to the first keyword in the list.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setSeparator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>separator</span>)</span>
+  </h3>
+  <p>Sets a separator string for the data object.</p>
+  separator is a static string of characters that will be appended to 
+  the keyword before the beginning of the content. This is useful if 
+  certain characters are needed separate a keyword from its arguments. 
+  separator defaults to an empty string, indicating that no separator 
+  will be added between the keyword and the content.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setTerminator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setTerminator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>terminator</span>)</span>
+  </h3>
+  <p>Sets a terminator string for the data object.</p>
+  terminator is a static string of characters that will be appended to 
+  the end of the data object content. This is useful for protocols where 
+  each field is terminated, such as fields in an HTTP header. terminator 
+  defaults to None, indicating that no terminator is to be used for the 
+  data object.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1 on Wed Aug 17 09:02:50 2005</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

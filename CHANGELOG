@@ -1,0 +1,29 @@
+antiparser-1.0:
+
+(July 2005)
+
+- This is the ill-fated never-to-be-publicly release XML to fuzzer version.
+
+antiparser-2.0-beta:
+
+(August 2005)
+
+- antiparser rewritten from the ground up as a Python API.
+
+antiparser-2.0:
+
+(August 17, 2005)
+
+- Removed half-assed sendTCP/sendUDP methods in lieu of adding an entire
+socket interface (apSocket).  Client socket interface is currently 
+available through apSocket.
+
+- Added version() method for printing the antiparser version string.
+
+- Added evilftpclient.py (1.0) script, which is a fully functional FTP server 
+fuzzer script.  This replaces the lame apexample-FTP.py script.
+
+- Added INSTALL notes.
+
+- Updated docs to reflect new API changes.
+

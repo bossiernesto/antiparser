@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>antiparser.antiparser</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="antiparser-module.html">Module&nbsp;antiparser</a> ::
+        Class&nbsp;antiparser
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="antiparser.antiparser-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class antiparser</h2>
+
+<hr/>
+
+Main class - should be imported into fuzzer scripts.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructor that is called when the class is instantiated.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#append" class="summary-sig-name"><code>append</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Append data to the antiparser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#delete" class="summary-sig-name"><code>delete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Remove data by name from the antiparser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#display" class="summary-sig-name"><code>display</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Prints all of the objects in the antiparser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#displayModes" class="summary-sig-name"><code>displayModes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display a list of supported modes for antiparser.permute().</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#getDebug" class="summary-sig-name"><code>getDebug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the debugging status.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#getGlobalDebug" class="summary-sig-name"><code>getGlobalDebug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the global debugging status.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#getList" class="summary-sig-name"><code>getList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return lists of data objects in the current antiparser instance.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#getPayload" class="summary-sig-name"><code>getPayload</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the payload of the current permutation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#juggle" class="summary-sig-name"><code>juggle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Randomly rearrange the ordering of data objects in the antiparser 
+instance.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#load" class="summary-sig-name"><code>load</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Loads a file containing a saved antiparser permutation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#permute" class="summary-sig-name"><code>permute</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Creates a random permutation of the content for each data object in 
+the antiparser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#save" class="summary-sig-name"><code>save</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Saves the current antiparser permutation to a file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#setDebug" class="summary-sig-name"><code>setDebug</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Sets the debugging status to True or False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#setGlobalDebug" class="summary-sig-name"><code>setGlobalDebug</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Sets the debugging status to True or False for all data objects in the 
+antiparser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#version" class="summary-sig-name"><code>version</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Prints the version.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="antiparser.antiparser-class.html#writeFile" class="summary-sig-name"><code>writeFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Writes the payload to a file for use in file format fuzzing.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Constructor that is called when the class is instantiated.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="append"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">append</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  <p>Append data to the antiparser.</p>
+  This method also extracts a new payload from the data set.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">delete</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  <p>Remove data by name from the antiparser.</p>
+  This method also extracts a new payload from the data set.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="display"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">display</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Prints all of the objects in the antiparser.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="displayModes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">displayModes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Display a list of supported modes for antiparser.permute().
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getDebug</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the debugging status.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getGlobalDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getGlobalDebug</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the global debugging status.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Return lists of data objects in the current antiparser instance.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getPayload"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getPayload</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  <p>Returns the payload of the current permutation.</p>
+  The payload is the random output to be used in fuzzer scripts.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="juggle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">juggle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  <p>Randomly rearrange the ordering of data objects in the antiparser 
+  instance.</p>
+  This method extracts the payload of the altered antiparser data. 
+  juggle() does not permute the data, just randomly reorders it. Users 
+  can then permit the data if they wish.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="load"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">load</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>)</span>
+  </h3>
+  Loads a file containing a saved antiparser permutation.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="permute"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">permute</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Creates a random permutation of the content for each data object in 
+  the antiparser.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="save"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">save</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>)</span>
+  </h3>
+  Saves the current antiparser permutation to a file.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setDebug</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>debug</span>)</span>
+  </h3>
+  <p>Sets the debugging status to True or False. Defaults to False.</p>
+  setDebug() sets the debugging status for the antiparser container 
+  only. For global debugging of all data objects in the container, use 
+  setGlobalDebug().
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setGlobalDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setGlobalDebug</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>debug</span>)</span>
+  </h3>
+  <p>Sets the debugging status to True or False for all data objects in 
+  the antiparser. Defaults to False.</p>
+  setGlobalDebug() will set the debug status for all of the data 
+  objects that have been appended to the current antiparser instance.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="version"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">version</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Prints the version.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="writeFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">writeFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>)</span>
+  </h3>
+  Writes the payload to a file for use in file format fuzzing.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="antiparser-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://www.antiparser.org">antiparser-2.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1 on Wed Aug 17 09:02:50 2005</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>
