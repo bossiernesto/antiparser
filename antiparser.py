@@ -1,4 +1,4 @@
-import cPickle
+import pickle
 import sys
 import struct
 import random
@@ -45,7 +45,7 @@ class antiparser:
            This method also extracts a new payload from the data set.
         """
         if self.debug:
-            print "++ Adding %s to %s ++" % (str(item), str(self))
+            print("++ Adding %s to %s ++" % (str(item), str(self)))
         self.objectList.append(item)
         self.__extractPayload()
 
@@ -55,7 +55,7 @@ class antiparser:
            This method also extracts a new payload from the data set.
         """
         if self.debug:
-            print "++ Removing %s from %s ++" % (str(item), str(self))
+            print("++ Removing %s from %s ++" % (str(item), str(self)))
         self.objectList.remove(item)
         self.__extractPayload()
 
@@ -67,20 +67,20 @@ class antiparser:
     def load(self, fileName):
         """Loads a file containing a saved antiparser permutation."""
         if self.debug:
-            print "++ Atempting to load %s ++" % fileName
+            print("++ Atempting to load %s ++" % fileName)
         try:
             infile = file(fileName, 'r')
-            antiparserobject = cPickle.load(infile)
-        except IOError, msg:
-            print "antiparser.load() error opening file: "
-        except cPickle.UnpicklingError, msg:
-            print "antiparser.load() unpickling error: "
+            antiparserobject = pickle.load(infile)
+        except IOError as msg:
+            print("antiparser.load() error opening file: ")
+        except pickle.UnpicklingError as msg:
+            print("antiparser.load() unpickling error: ")
         try:
             infile.close()
-        except IOError, msg:
-            print "antiparser.load() error closing file: "
+        except IOError as msg:
+            print("antiparser.load() error closing file: ")
         if self.debug:
-            print "++ Creating antiparser data ++"
+            print("++ Creating antiparser data ++")
         for item in antiparserobject.objectList:
             self.append(item)
         self.__extractPayload()
@@ -88,29 +88,29 @@ class antiparser:
     def save(self, fileName):
         """Saves the current antiparser permutation to a file."""
         if self.debug:
-            print "++ Attempting to save %s to %s ++" % (str(self), fileName)
+            print("++ Attempting to save %s to %s ++" % (str(self), fileName))
         (directory, name) = os.path.split(fileName)
         try:
             if os.path.isdir(directory) or directory == "":
                 outfile = file(fileName, 'w')
             else:
-                os.mkdir(directory, 0700)
+                os.mkdir(directory, 0o700)
                 outfile = file(fileName, 'w')
-            cPickle.dump(self, outfile, 2)
-        except IOError, msg:
-            print "antiparser.save() error opening file: "
-        except cPickle.PicklingError, msg:
-            print "antiparser.save() pickling error: "
+            pickle.dump(self, outfile, 2)
+        except IOError as msg:
+            print("antiparser.save() error opening file: ")
+        except pickle.PicklingError as msg:
+            print("antiparser.save() pickling error: ")
         try:
             outfile.close()
-        except IOError, msg:
-            print "antiparser.save() error closing file: "
+        except IOError as msg:
+            print("antiparser.save() error closing file: ")
         if self.debug:
-            print "++ Saved ++"
+            print("++ Saved ++")
 
     def version(self):
         """Prints the version."""
-        print self.version
+        print(self.version)
 
     def getList(self):
         """Return lists of data objects in the current antiparser instance."""
@@ -119,28 +119,28 @@ class antiparser:
     def writeFile(self, fileName):
         """Writes the payload to a file for use in file format fuzzing."""
         if self.debug:
-            print "++ Writing payload to %s ++" % fileName
+            print("++ Writing payload to %s ++" % fileName)
         (directory, name) = os.path.split(fileName)
         try:
             if os.path.isdir(directory) or directory == "":
                 outfile = file(fileName, 'w')
                 outfile.write(self.getPayload())
             else:
-                os.mkdir(directory, 0700)
+                os.mkdir(directory, 0o700)
                 outfile = file(fileName, 'w')
                 outfile.write(self.getPayload())
-        except IOError, msg:
-            print "antiparser.writeFile() error opening file: "
+        except IOError as msg:
+            print("antiparser.writeFile() error opening file: ")
         try:
             outfile.close()
-        except IOError, msg:
-            print "antiparser.writeFile() error closing file: "
+        except IOError as msg:
+            print("antiparser.writeFile() error closing file: ")
 
     def __extractPayload(self):
         structfmt = ""
         structlist = []
         if self.debug:
-            print "++ Extracting new payload from %s ++" % self.getList()
+            print("++ Extracting new payload from %s ++" % self.getList())
         for item in self.objectList:
             # deal with byte order and optional fields
             if item.getByteOrder() is not None:
@@ -222,7 +222,7 @@ class antiparser:
                         structfmt += 'l'
                     else:
                         structfmt += 'L'
-                    structlist.append(long(item.getContent()))
+                    structlist.append(int(item.getContent()))
 
             # pack and set the payload
             payload = struct.pack(structfmt, *structlist)
@@ -240,9 +240,9 @@ class antiparser:
 
     def displayModes(self):
         """Display a list of supported modes for antiparser.permute()."""
-        print "The following modes are available:"
+        print("The following modes are available:")
         for item in self.modes:
-            print item
+            print(item)
 
     def getDebug(self):
         """Returns the debugging status."""
@@ -282,8 +282,8 @@ class antiparser:
         """
         random.shuffle(self.objectList)
         if self.debug:
-            print "++ Juggling contents of %s ++" % (str(self))
-            print self.getList()
+            print("++ Juggling contents of %s ++" % (str(self)))
+            print(self.getList())
         self.__extractPayload()
 
     def permute(self):
@@ -294,7 +294,7 @@ class antiparser:
                 if item.getMode().lower() == "random":
                     # should match all string types
                     if self.debug:
-                        print "++ Permuting %s in random mode ++" % str(item)
+                        print("++ Permuting %s in random mode ++" % str(item))
                     if isinstance(item, apString):
                         tempList = []  # list to build string
                         randomString = ""
@@ -303,7 +303,7 @@ class antiparser:
                             size = item.getMinSize()
                         else:
                             size = random.randrange(item.getMinSize(), item.getMaxSize())
-                        for i in xrange(size):
+                        for i in range(size):
                             tempList.append(random.choice(item.charRange))
                         randomString = string.join(tempList, '')
                         item.setContent(randomString)
@@ -323,7 +323,7 @@ class antiparser:
                             size = item.getMinSize()
                         else:
                             size = random.randrange(item.getMinSize(), item.getMaxSize())
-                        for i in xrange(size - 1):
+                        for i in range(size - 1):
                             tempList.append(random.choice(item.charRange))
                         item.setCurrentKeyword(randomKey)
                         randomString = string.join(tempList, '')
@@ -332,7 +332,7 @@ class antiparser:
                 # crap incremental mode -- not implemented for apChar/apShort/apLong
                 if item.getMode().lower() == "incremental":
                     if self.debug:
-                        print "++ Permuting %s in incremental mode ++" % str(item)
+                        print("++ Permuting %s in incremental mode ++" % str(item))
                     if isinstance(item, apString) or isinstance(item, apKeywords):
                         # this algorithm really sucks but seems to work
                         tempList = []
@@ -350,12 +350,12 @@ class antiparser:
                         if currentSize > upper + delta:
                             currentSize = upper + delta
                         # build lower + delta range
-                        boundsList.extend(range(lower, lower + delta + 1))
+                        boundsList.extend(list(range(lower, lower + delta + 1)))
                         # build rest of range
                         for number in boundsRange:
                             if number not in boundsList:
                                 if number > lower and number < upper:
-                                    boundsList.extend(range(number, number + delta + 1))
+                                    boundsList.extend(list(range(number, number + delta + 1)))
                         # build upper + delta range
                         for number in range(upper, upper + delta + 1):
                             if number not in boundsList:
@@ -369,7 +369,7 @@ class antiparser:
                                 break
                             if currentSize == number:
                                 try:
-                                    size = listiter.next()
+                                    size = next(listiter)
                                 except StopIteration:
                                     size = boundsList[-1]
                                 break
@@ -377,12 +377,12 @@ class antiparser:
                             randomKey = str(random.choice(item.keywords))
                             item.setCurrentKeyword(randomKey)
 
-                        for i in xrange(size):
+                        for i in range(size):
                             tempList.append(random.choice(item.charRange))
                         randomString = string.join(tempList, '')
                         item.setContent(randomString)
                         if self.debug:
-                            print "Content Length: %s " % item.getContentSize()
+                            print("Content Length: %s " % item.getContentSize())
 
             # set the new payload based on changed content
             self.__extractPayload()
@@ -405,9 +405,9 @@ class apObject:
 
     def display(self):
         """Print the data object."""
-        print "Data Object: %s" % str(self)
-        stringrep = str(self.__dict__.items())
-        print stringrep + "\n"
+        print("Data Object: %s" % str(self))
+        stringrep = str(list(self.__dict__.items()))
+        print(stringrep + "\n")
 
     def getContent(self):
         """Returns the content of the data object."""
@@ -424,7 +424,7 @@ class apObject:
     def setMinSize(self, minsize):
         """Sets the minsize property of the data object to an integer."""
         if self.debug:
-            print "++ Setting minsize for %s to: %s ++" % (str(self), minsize)
+            print("++ Setting minsize for %s to: %s ++" % (str(self), minsize))
         self.minsize = minsize
 
     def getMaxSize(self):
@@ -434,7 +434,7 @@ class apObject:
     def setMaxSize(self, maxsize):
         """Sets the maxsize property of the data object to an integer."""
         if self.debug:
-            print "++ Setting maxsize for %s to: %s ++" % (str(self), maxsize)
+            print("++ Setting maxsize for %s to: %s ++" % (str(self), maxsize))
         self.maxsize = maxsize
 
     def getOptional(self):
@@ -452,7 +452,7 @@ class apObject:
            data object in the antiparser payload.
         """
         if self.debug:
-            print "++ Setting optional attribute for %s to: %s ++" % (str(self), optional)
+            print("++ Setting optional attribute for %s to: %s ++" % (str(self), optional))
         self.optional = optional
 
     def getStatic(self):
@@ -470,7 +470,7 @@ class apObject:
            the data object.
         """
         if self.debug:
-            print "++ Setting static attribute for %s to: %s ++" % (str(self), static)
+            print("++ Setting static attribute for %s to: %s ++" % (str(self), static))
         self.static = static
 
     def getByteOrder(self):
@@ -485,7 +485,7 @@ class apObject:
            which generally means that the native byteorder is used.
         """
         if self.debug:
-            print "++ Setting byteorder attribute for %s to: %s ++" % (str(self), byteorder)
+            print("++ Setting byteorder attribute for %s to: %s ++" % (str(self), byteorder))
         self.byteorder = byteorder
 
     def getMode(self):
@@ -501,7 +501,7 @@ class apObject:
            modes may allow the user to generate data of incrementally larger sizes.
         """
         if self.debug:
-            print "++ Setting mode for %s to: %s" % (str(self), mode)
+            print("++ Setting mode for %s to: %s" % (str(self), mode))
         self.mode = mode
 
     def getDebug(self):
@@ -542,7 +542,7 @@ class apString(apObject):
            the charRange field.
         """
         if self.debug:
-            print "++ Setting illegal character range for %s to: %s ++" % (str(self), chars)
+            print("++ Setting illegal character range for %s to: %s ++" % (str(self), chars))
         self.illegalchars = chars
         self.__extractCharRange()
 
@@ -559,7 +559,7 @@ class apString(apObject):
            data object.
         """
         if self.debug:
-            print "++ Setting terminator characters for %s to: %s ++" % (str(self), terminator)
+            print("++ Setting terminator characters for %s to: %s ++" % (str(self), terminator))
         self.terminator = terminator
 
     def getContentSize(self):
@@ -616,7 +616,7 @@ class apKeywords(apObject):
            the charRange field.
         """
         if self.debug:
-            print "++ Setting illegal character range for %s to: %s ++" % (str(self), chars)
+            print("++ Setting illegal character range for %s to: %s ++" % (str(self), chars))
         self.illegalchars = chars
         self.__extractCharRange()
 
@@ -633,7 +633,7 @@ class apKeywords(apObject):
            data object.
         """
         if self.debug:
-            print "++ Setting terminator characters for %s to: %s ++" % (str(self), terminator)
+            print("++ Setting terminator characters for %s to: %s ++" % (str(self), terminator))
         self.terminator = terminator
 
     def getSeparator(self):
@@ -649,7 +649,7 @@ class apKeywords(apObject):
            and the content.
         """
         if self.debug:
-            print "+++ Setting separator for %s to: %s +++" % (str(self) + separator)
+            print("+++ Setting separator for %s to: %s +++" % (str(self) + separator))
         self.separator = separator
 
     def getKeywords(self):
@@ -665,11 +665,11 @@ class apKeywords(apObject):
            keyword associated with the data object to the first keyword in the list.
         """
         if self.debug:
-            print "++ Setting keyword list for %s to: %s ++" % (str(self), keywords)
+            print("++ Setting keyword list for %s to: %s ++" % (str(self), keywords))
         self.keywords = keywords
         self.setCurrentKeyword(self.keywords[0])
         if self.debug:
-            print "++ Setting initial keyword value to: %s ++" % self.getCurrentKeyword()
+            print("++ Setting initial keyword value to: %s ++" % self.getCurrentKeyword())
 
     def getCurrentKeyword(self):
         """Returns the current keyword associated with the data object."""
@@ -708,7 +708,7 @@ class apChar(apObject):
         setting the signed field.
         """
         if self.debug:
-            print "+++ Setting signed value for %s to: %s" % (str(self), signed)
+            print("+++ Setting signed value for %s to: %s" % (str(self), signed))
         self.signed = signed
 
         if self.signed:
@@ -743,7 +743,7 @@ class apShort(apObject):
         setting the signed field.
         """
         if self.debug:
-            print "+++ Setting signed value for %s to: %s" % (str(self), signed)
+            print("+++ Setting signed value for %s to: %s" % (str(self), signed))
         self.signed = signed
         if self.signed:
             self.setMinSize(-2 ** 15)
@@ -758,7 +758,7 @@ class apLong(apObject):
 
     def __init__(self):
         apObject.__init__(self)
-        self.content = 0L
+        self.content = 0
         # default to unsigned
         self.signed = False
         self.minsize = 0
@@ -777,7 +777,7 @@ class apLong(apObject):
         setting the signed field.
         """
         if self.debug:
-            print "+++ Setting signed value for %s to: %s" % (str(self), signed)
+            print("+++ Setting signed value for %s to: %s" % (str(self), signed))
         self.signed = signed
         if self.signed:
             self.setMinSize(-2 ** 31)
@@ -816,8 +816,8 @@ class apSocket:
         self.port = port
         try:
             self.sock.connect((self.host, self.port))
-        except socket.error, msg:
-            print "Could not connect: ", msg
+        except socket.error as msg:
+            print("Could not connect: ", msg)
 
     def sendTCP(self, payload):
         """Alias for the socket.sendall method, will send the entire payload over the socket."""

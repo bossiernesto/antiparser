@@ -32,7 +32,7 @@ def usage():
         --save [directory]	Save each permutation to the specified directory.
         NOTE: --save creates a lot of files depending on the fuzzer mode -- one for each payload sent.
   """
-    print help
+    print(help)
 
 
 def main(argv):
@@ -92,7 +92,7 @@ def main(argv):
             PATH = arg
         if opt in ("--stdin"):
             AUTH = True
-            USER = raw_input('Username: ')
+            USER = input('Username: ')
             PASS = getpass.getpass('Password: ')
         if opt in ("--fmt"):
             MODE = "fmt"
@@ -131,52 +131,52 @@ def main(argv):
                            'XMKD', 'MDTM', 'NLST', 'PWD', 'XPWD', 'RETR', 'RMD', 'XRMD',
                            'RNFR', 'RNTO', 'STOR', 'STOU']
 
-            for i in xrange(1, 65):
+            for i in range(1, 65):
                 ap.permute()
                 sock = apSocket()
-                print "++ Connecting to Server: %s %s" % (HOST, PORT)
+                print("++ Connecting to Server: %s %s" % (HOST, PORT))
                 sock.connect(HOST, PORT)
                 # print banner
-                print sock.recv(10240)
+                print(sock.recv(10240))
                 if AUTH:
-                    print "++ Sending USER credentials ++"
+                    print("++ Sending USER credentials ++")
                     sock.sendTCP("USER " + USER + TERMINATOR)
-                    print sock.recv(10240)
-                    print "++ Sending PASS credentials ++"
+                    print(sock.recv(10240))
+                    print("++ Sending PASS credentials ++")
                     sock.sendTCP("PASS " + PASS + TERMINATOR)
-                    print sock.recv(10240)
+                    print(sock.recv(10240))
 
-                print "++ Sending command: %s Length: %s ++" % (cmd, cmdkw.getContentSize())
+                print("++ Sending command: %s Length: %s ++" % (cmd, cmdkw.getContentSize()))
                 sock.sendTCP(ap.getPayload())
-                print sock.recv(1024)
+                print(sock.recv(1024))
                 sock.close()
                 if SAVE:
                     file = PATH + "/" + cmd + "fuzz" + str(i)
-                    print "++ Saving permutation as %s ++" % file
+                    print("++ Saving permutation as %s ++" % file)
                     ap.save(file)
                 if SLEEP:
                     sock.sleep(TIME)
 
         if MODE == "fmt":
             sock = apSocket()
-            print "++ Connecting to server: %s %s ++" % (HOST, PORT)
+            print("++ Connecting to server: %s %s ++" % (HOST, PORT))
             sock.connect(HOST, PORT)
             # print banner
-            print sock.recv(1024)
+            print(sock.recv(1024))
             if AUTH:
-                print "++ Sending USER credentials ++"
+                print("++ Sending USER credentials ++")
                 sock.sendTCP("USER " + USER + TERMINATOR)
-                print sock.recv(1024)
-                print "++ Sending PASS credentials ++"
+                print(sock.recv(1024))
+                print("++ Sending PASS credentials ++")
                 sock.sendTCP("PASS " + PASS + TERMINATOR)
-                print sock.recv(1024)
-            print "++ Sending command: %s (Format String Mode) ++" % cmd
+                print(sock.recv(1024))
+            print("++ Sending command: %s (Format String Mode) ++" % cmd)
             sock.sendTCP(ap.getPayload())
-            print sock.recv(1024)
+            print(sock.recv(1024))
             sock.close()
             if SAVE:
                 file = PATH + "/" + cmd + "fuzz" + str(i)
-                print "++ Saving permutation as %s ++" % file
+                print("++ Saving permutation as %s ++" % file)
                 ap.save(file)
             if SLEEP:
                 sock.sleep(TIME)
